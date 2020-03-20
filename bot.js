@@ -33,6 +33,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     message: 'Pong!'
                 });
                 break;
+            //Suggestions
             case 'suggest':
                 //bot.channels.get(`690575674544619571`).send('Sugerencia: ' + args);
                 var procMessage = message.replace('-suggest','');
@@ -41,6 +42,15 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     message: 'Sugerencia: ' + procMessage
                 });
                 break;
+            //Make the bot say whatever the user wants
+            case 'say':
+                var procMessage = message.replace('-say','');
+                bot.sendMessage({
+                    to: channelID, //channelID, //ID of the suggestions channel
+                    message: procMessage
+                });
+                break;
+            //If there is no known command
             default:
                 bot.sendMessage({
                     to: channelID,
