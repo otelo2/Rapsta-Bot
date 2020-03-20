@@ -94,6 +94,43 @@ client.on('message', function (user, userID, channelID, message, evt) {
                       }
                 });
                 break;
+            //Show list of available commands
+            case 'help':
+                var procMessage = message.replace('-test','');
+                client.sendMessage({
+                    to: channelID, 
+                    "embed": {
+                        "title": "Comandos",
+                        "description": "Lista de comandos disponibles para Rapsta Bot hasta el TIMESTAMP. Prefijo: -",
+                        "color": 913550,
+                        "timestamp": evt.d.timestamp,
+                        "footer": {
+                          "text": `${user}`
+                        },
+                    
+                        "author": {
+                          "name": "Rapsta Bot",
+                          "url": "https://github.com/otelo2/Rapsta-Bot",
+                          "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png"
+                        },
+                        
+                        "fields": [
+                          {
+                            "name": "suggest",
+                            "value": "Haz una sugerencia de funciones que añadir a Rapsta Bot."
+                          },
+                          {
+                            "name": "say",
+                            "value": "Rapsta Bot dice lo que escribas después de éste comando."
+                          },
+                          {
+                            "name": "help",
+                            "value": "Muestra la lista de comandos."
+                          }
+                        ]
+                      }
+                });
+                break;
             //If there is no known command
             default:
                 client.sendMessage({
