@@ -42,7 +42,7 @@ client.on('message', function (user, userID, channelID, message, evt) {
                         "title": "Sugerencia",
                         "description": `${procMessage}`,
                         "color": 1503970,
-                        "timestamp": "2020-03-20T19:14:49.939Z",
+                        "timestamp": evt.d.timestamp,
                         "footer": {
                           "text": `${user}`
                         },
@@ -82,7 +82,7 @@ client.on('message', function (user, userID, channelID, message, evt) {
                         "title": "Sugerencia",
                         "description": `${procMessage}`,
                         "color": 1503970,
-                        "timestamp": "2020-03-20T19:14:49.939Z",
+                        "timestamp": evt.d.timestamp,
                         "footer": {
                           "text": `${user}`
                         },
@@ -101,7 +101,7 @@ client.on('message', function (user, userID, channelID, message, evt) {
                     to: channelID, 
                     "embed": {
                         "title": "Comandos",
-                        "description": "Lista de comandos disponibles para Rapsta Bot hasta el TIMESTAMP. Prefijo: -",
+                        "description": "Lista de comandos disponibles para Rapsta Bot. Prefijo: `-`",
                         "color": 913550,
                         "timestamp": evt.d.timestamp,
                         "footer": {
