@@ -19,20 +19,34 @@ bot.on('ready', function (evt) {
 });
 bot.on('message', function (user, userID, channelID, message, evt) {
     // Our bot needs to know if it will execute a command
-    // It will listen for messages that will start with `!`
-    if (message.substring(0, 1) == '!') {
+    // It will listen for messages that will start with `-`
+    if (message.substring(0, 1) == '-') {
         var args = message.substring(1).split(' ');
         var cmd = args[0];
        
         args = args.splice(1);
         switch(cmd) {
-            // !ping
+            // -ping
             case 'ping':
                 bot.sendMessage({
                     to: channelID,
                     message: 'Pong!'
                 });
-            break;
+                break;
+            case 'suggest':
+                //bot.channels.get(`690575674544619571`).send('Sugerencia: ' + args);
+                var procMessage = message.replace('-suggest','');
+                bot.sendMessage({
+                    to: '690575674544619571', //channelID, //ID of the suggestions channel
+                    message: 'Sugerencia: ' + procMessage
+                });
+                break;
+            default:
+                bot.sendMessage({
+                    to: channelID,
+                    message: '¿Qué ladras?'
+                });
+                break;
             // Just add any case commands if you want to..
          }
      }
