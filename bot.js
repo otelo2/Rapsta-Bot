@@ -67,8 +67,12 @@ client.on('message', function (user, userID, channelID, message, evt) {
                     to: channelID, //channelID, //ID of the suggestions channel
                     message: procMessage
                 });
+                //Delete the message the user sent
+                client.deleteMessage({
+                    channelID: channelID,
+                    messageID: evt.d.id,
+                })
                 break;
-                //TODO: delete the message the user sent, not the bot
             //Dev command for testing wip things
             case 'test':
                 var procMessage = message.replace('-test','');
@@ -94,7 +98,7 @@ client.on('message', function (user, userID, channelID, message, evt) {
             default:
                 client.sendMessage({
                     to: channelID,
-                    message: '¿Qué ladras?'
+                    message: 'Qué ladras?'
                 });
                 break;
             // Just add any case commands if you want to..
