@@ -35,7 +35,6 @@ client.on('message', function (user, userID, channelID, message, evt) {
                 break;
             //Suggestions
             case 'suggest':
-                //bot.channels.get(`690575674544619571`).send('Sugerencia: ' + args);
                 var procMessage = message.replace('-suggest','');
                 client.sendMessage({
                     to: '690575674544619571', //channelID, //ID of the suggestions channel
@@ -54,7 +53,12 @@ client.on('message', function (user, userID, channelID, message, evt) {
                         }
                       }
                 });
-                //TODO: delete the message the user sent, not the bot
+                // Delete the message the user sent
+                client.deleteMessage({
+                    channelID: channelID,
+                    messageID: evt.d.id,
+                })
+                
                 break;
             //Make the bot say whatever the user wants
             case 'say':
