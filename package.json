@@ -1,0 +1,8 @@
+{
+“name”: “Rapsta Bot”,
+“version”: “1.0.0”,
+“description”: “Bot para Rapsta Gang”,
+“main”: “bot.js”,
+“author”: “Otelo2#6793”,
+“dependencies”: {}
+}
