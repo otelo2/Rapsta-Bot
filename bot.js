@@ -18,7 +18,6 @@ client.on('ready', function (evt) {
     logger.info(client.username + ' - (' + client.id + ')');
 });
 client.on('message', function (user, userID, channelID, message, evt) {
-    // Our bot needs to know if it will execute a command
     // It will listen for messages that will start with `-`
     if (message.substring(0, 1) == '-') {
         var args = message.substring(1).split(' ');
@@ -64,7 +63,7 @@ client.on('message', function (user, userID, channelID, message, evt) {
             case 'say':
                 var procMessage = message.replace('-say','');
                 client.sendMessage({
-                    to: channelID, //channelID, //ID of the suggestions channel
+                    to: channelID, //Current channel
                     message: procMessage
                 });
                 //Delete the message the user sent
@@ -75,24 +74,21 @@ client.on('message', function (user, userID, channelID, message, evt) {
                 break;
             //Dev command for testing wip things
             case 'test':
-                var procMessage = message.replace('-test','');
-                client.sendMessage({
-                    to: '690575674544619571', //channelID, //ID of the suggestions channel
-                    "embed": {
-                        "title": "Sugerencia",
-                        "description": `${procMessage}`,
-                        "color": 1503970,
-                        "timestamp": evt.d.timestamp,
-                        "footer": {
-                          "text": `${user}`
-                        },
-                        "author": {
-                          "name": "Rapsta Bot",
-                          "url": "https://github.com/otelo2/Rapsta-Bot",
-                          "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png"
-                        }
-                      }
+                //Check if its me
+                if( user.localeCompare("Otelo2") == 0)
+                {
+                  client.sendMessage({
+                    to: channelID, //Current channel
+                    message: "Tú eres Otelo, tú me caes bien."
                 });
+                }
+                else
+                {
+                  client.sendMessage({
+                    to: channelID, //Current channel
+                    message: "No sé quien te crees, pero no te voy a hacer caso."
+                });
+                }
                 break;
             //Show list of available commands
             case 'help':
@@ -138,7 +134,6 @@ client.on('message', function (user, userID, channelID, message, evt) {
                     message: 'Qué ladras?'
                 });
                 break;
-            // Just add any case commands if you want to..
          }
      }
 });
