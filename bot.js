@@ -37,7 +37,7 @@ client.on('message', function (user, userID, channelID, message, evt) {
             case 'suggest':
                 var procMessage = message.replace('-suggest','');
                 client.sendMessage({
-                    to: '690575674544619571', //channelID, //ID of the suggestions channel
+                    to: '690672830777655396', //channelID, //ID of the suggestions channel
                     "embed": {
                         "title": "Sugerencia",
                         "description": `${procMessage}`,
@@ -77,7 +77,7 @@ client.on('message', function (user, userID, channelID, message, evt) {
             case 'test':
                 var procMessage = message.replace('-test','');
                 client.sendMessage({
-                    to: '690575674544619571', //channelID, //ID of the suggestions channel
+                    to: '690672830777655396', //channelID, //ID of the suggestions channel
                     "embed": {
                         "title": "Sugerencia",
                         "description": `${procMessage}`,
