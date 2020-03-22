@@ -4,13 +4,8 @@ module.exports = {
     args: true,
     usage: '<texto>',
 	guildOnly: false,
-	aliases: ['di', 'habla'],
-	execute(message, args) {
-        const dataArr = [];
-        dataArr.push(args);
-        var stringData = dataArr.join(' ');
-        stringData = stringData.replace(/,/g," "); //Ugly fix until i figure out why join aint working
-
-		message.channel.send(stringData);
+	//aliases: ['di', 'habla'],
+	execute(message, args) { 
+		message.channel.send(message.content.replace("-say","")); //But this makes it so i cant use aliases
 	},
 };
