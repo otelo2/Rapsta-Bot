@@ -2,10 +2,11 @@
   "name": "RapstaBot",
   "version": "1.0.0",
   "description": "Bot para Rapsta Gang",
-  "main": "bot.js",
+  "main": "index.js",
   "author": "Otelo2#6793",
   "dependencies": {
-    "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
+    "discord.js": "^12.0.2",
+    "eslint": "^6.8.0",
     "winston": "^3.2.1"
   }
 }

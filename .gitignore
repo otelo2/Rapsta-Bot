@@ -1637,3 +1637,8 @@ node_modules/ws/lib/Validation.js
 node_modules/ws/lib/WebSocket.js
 node_modules/ws/lib/WebSocketServer.js
 node_modules
+.eslintrc.json
+config.json
+bot.js
+bot.js
+bot.js
