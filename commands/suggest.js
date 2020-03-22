@@ -29,6 +29,7 @@ module.exports = {
           //message.channel.send({ embed });
           channel.send({embed});
 
-
+          //Delete the message sent by the user
+          message.delete();
 	},
 };
