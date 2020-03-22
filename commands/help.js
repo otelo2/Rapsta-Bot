@@ -4,10 +4,10 @@ const {
 
 module.exports = {
     name: 'help',
-    description: 'List all of my commands or info about a specific command.',
+    description: 'Muestra la lista de comandos o información sobre un comando específico.',
     aliases: ['commands'],
     usage: '[command name]',
-    cooldown: 5,
+    cooldown: 0,
     execute(message, args) {
         const data = [];
         const {

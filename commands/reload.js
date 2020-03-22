@@ -1,6 +1,7 @@
 module.exports = {
     name: 'reload',
     description: 'Reloads a command',
+    aliases: ['rl'],
     execute(message, args) {
         const commandName = args[0].toLowerCase();
         const command = message.client.commands.get(commandName) ||
@@ -19,6 +20,6 @@ module.exports = {
         }
 
         message.channel.send(`Command \`${commandName}\` was reloaded!`);
-        
+
     },
 };
