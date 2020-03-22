@@ -1639,3 +1639,5 @@ node_modules/ws/lib/WebSocketServer.js
 node_modules
 .eslintrc.json
 config.json
+bot.js
+bot.js
