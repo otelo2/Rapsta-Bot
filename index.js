@@ -71,7 +71,6 @@ client.on('message', message => {
 		message.reply('there was an error trying to execute that command!');
 	}
 
-	
 });
 
 client.login(token);
