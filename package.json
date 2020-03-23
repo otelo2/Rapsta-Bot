@@ -1,5 +1,5 @@
 {
-  "name": "RapstaBot",
+  "name": "rapstabot",
   "version": "1.0.0",
   "description": "Bot para Rapsta Gang",
   "main": "index.js",
@@ -8,5 +8,20 @@
     "discord.js": "^12.0.2",
     "eslint": "^6.8.0",
     "winston": "^3.2.1"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/otelo2/Rapsta-Bot.git"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/otelo2/Rapsta-Bot/issues"
+  },
+  "homepage": "https://github.com/otelo2/Rapsta-Bot#readme"
 }
