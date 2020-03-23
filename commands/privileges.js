@@ -1,5 +1,5 @@
 module.exports = {
-    name: 'priviliges',
+    name: 'privileges',
     description: 'Revisa si el usuario tiene privilegios para comandos avanzados',
     args: false,
     aliases: ['priv'],
@@ -9,7 +9,7 @@ module.exports = {
             message.reply("Only you are worthy");
         }
         else{
-            message.reply("Aún no puedes acceder a ésa función.");
+            message.reply("Aún no puedes acceder a esa función.");
         }
 
     },
