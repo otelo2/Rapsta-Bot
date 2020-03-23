@@ -26,8 +26,12 @@ module.exports = {
               "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png"
             }
           };
-          //message.channel.send({ embed });
-          channel.send({embed});
+          //Send and Add the voting reactions to the suggestion
+          channel.send({embed}).then(sentMessage => {
+            sentMessage.react('👍');
+            sentMessage.react('😐')
+            sentMessage.react('👎');
+          });
 
           //Delete the message sent by the user
           message.delete();
