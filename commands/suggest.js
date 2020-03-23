@@ -10,7 +10,7 @@ module.exports = {
         procMessage = procMessage.replace("-suggest","").replace("-sugerencia","").replace("-idea",""); //fugly but fast
 
         //const channel = message.client.channels.fetch('690575674544619571',false)
-        const channel = message.client.channels.cache.get('690575674544619571');
+        const channel = message.client.channels.cache.get('690672830777655396'); //suggersions channel
 
         const embed = {
             "title": "Sugerencia",
