@@ -1,6 +1,9 @@
-const {
+//Normal use
+/* const {
     prefix
-} = require('../config.json');
+} = require('../config.json'); */
+//For Heruku
+const prefix = process.env.prefix;
 
 module.exports = {
     name: 'help',
