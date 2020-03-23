@@ -7,5 +7,6 @@ module.exports = {
 	//aliases: ['di', 'habla'],
 	execute(message, args) { 
 		message.channel.send(message.content.replace("-say","")); //But this makes it so i cant use aliases
+		message.remove()
 	},
 };
