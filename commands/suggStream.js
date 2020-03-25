@@ -1,13 +1,13 @@
 module.exports = {
-	name: 'suggStream',
+	name: 'suggstream',
     description: 'Haz una sugerencia para el stream de Rapsta Gang.',
     args: true,
     usage: '<sugerencia>',
 	guildOnly: true,
-	aliases: ['sugerenciaStream', 'sStream', 'suggestStream'],
+	aliases: ['sugerenciastream', 'sstream', 'suggeststream'],
 	execute(message, args) {
         var procMessage = message.content;
-        procMessage = procMessage.replace("-sugerenciaStream","").replace("-sStream","").replace("-suggestStream","").replace("-suggStream",""); //fugly but fast
+        procMessage = procMessage.replace("-sugerenciastream","").replace("-sstream","").replace("-suggeststream","").replace("-suggstream",""); //fugly but fast
 
         //const channel = message.client.channels.fetch('690575674544619571',false)
         const channel = message.client.channels.cache.get('692173788560883792'); //suggersions channel inside ZP
