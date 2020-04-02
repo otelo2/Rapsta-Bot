@@ -25,7 +25,10 @@ client.music.start(client, {
   anyoneCanSkip: true,
   anyoneCanAdjust: true, //volume
   anyoneCanLeabe: true,
-  musicPresence: true
+  musicPresence: true,
+  help: {
+	  exlude: true
+  }
 });
 
 
