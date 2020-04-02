@@ -27,6 +27,7 @@ client.music.start(client, {
   anyoneCanLeabe: true,
   musicPresence: true,
   help: {
+	  enabled: false,
 	  exlude: true
   }
 });
