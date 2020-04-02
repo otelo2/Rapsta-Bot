@@ -9,30 +9,6 @@ const token = process.env.TOKEN;
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 
-// Put the Music module in the new Client object.
-// This allows for easy access to all the modules
-// functions and data.
-client.music = require("discord.js-musicbot-addon");
-
-// Now we start the music module.
-client.music.start(client, {
-  // Set the api key used for YouTube.
-  // This is required to run the bot.
-  youtubeKey: process.env.TOKENYT,
-  botPrefix: prefix,
-  messageNewSong: false,
-  maxQueueSize: 0, //Sets to unlimited
-  anyoneCanSkip: true,
-  anyoneCanAdjust: true, //volume
-  anyoneCanLeabe: true,
-  musicPresence: true,
-  help: {
-	  enabled: false,
-	  exlude: true
-  }
-});
-
-
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
 for (const file of commandFiles) {
