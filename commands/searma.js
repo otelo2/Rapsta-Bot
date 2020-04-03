@@ -7,7 +7,7 @@ module.exports = {
 	aliases: ['carma', 'arma', 'hoysearma?', 'searma?'],
 	execute(message, args) {
 
-        const channel = message.client.channel; //current channel
+        const channel = message.channel; //current channel
 
         const embed = {
             "title": "Hoy se arma?",
