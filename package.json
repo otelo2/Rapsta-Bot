@@ -6,6 +6,7 @@
   "author": "Otelo2#6793",
   "dependencies": {
     "discord.js": "^12.0.2",
+    "discord.js-commando": "github:discordjs/Commando",
     "discord.js-musicbot-addon": "^13.9.1",
     "eslint": "^6.8.0",
     "opus": "0.0.0",
