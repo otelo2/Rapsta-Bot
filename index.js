@@ -22,7 +22,10 @@ client.once('ready', () => {
 	console.log('Ready!');
 });
 
-
+//Set activity to streaming with rapsta gang's twitch url
+client.user.setPresence({ activity: { name: 'Viendo a los weyes jugar', type: 'STREAMING', url: 'https://www.twitch.tv/rapsta_gang/' }, status: 'online' })
+  .then(console.log)
+  .catch(console.error);
 
 client.on('message', message => {
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
@@ -77,10 +80,5 @@ client.on('message', message => {
 	}
 
 });
-
-//Set activity to streaming with rapsta gang's twitch url
-client.user.setActivity('Viendo a los weyes jugar', { type: 'STREAMING', url: 'https://www.twitch.tv/rapsta_gang/' })
-.then(presence => console.log(`Activity set to ${presence.activities[0].name}`))
-.catch(console.error);
 
 client.login(process.env.TOKEN);
