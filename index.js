@@ -22,6 +22,11 @@ client.once('ready', () => {
 	console.log('Ready!');
 });
 
+//Set activity to streaming with rapsta gang's twitch url
+client.user.setActivity('discord.js', { type: 'STREAMING', url: 'https://www.twitch.tv/rapsta_gang/' })
+  .then(presence => console.log(`Activity set to ${presence.activities[0].name}`))
+  .catch(console.error);
+
 client.on('message', message => {
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
 
