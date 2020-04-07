@@ -23,9 +23,9 @@ client.once('ready', () => {
 });
 
 //Set activity to streaming with rapsta gang's twitch url
-client.user.setPresence({ activity: { name: 'Viendo a los weyes jugar', type: 'STREAMING', url: 'https://www.twitch.tv/rapsta_gang/' }, status: 'online' })
+/* client.user.setPresence({ activity: { name: 'Viendo a los weyes jugar', type: 'STREAMING', url: 'https://www.twitch.tv/rapsta_gang/' }, status: 'online' })
   .then(console.log)
-  .catch(console.error);
+  .catch(console.error); */
 
 client.on('message', message => {
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
