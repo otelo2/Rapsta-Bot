@@ -1,3 +1,10 @@
+//Normal use
+/*const {
+  prefix
+} = require('../config.json'); //*/
+//For Heruku
+const prefix = process.env.prefix;
+
 module.exports = {
 	name: 'suggstream',
     description: 'Haz una sugerencia para el stream de Rapsta Gang.',
