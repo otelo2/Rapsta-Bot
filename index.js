@@ -1,10 +1,6 @@
 //Standard configuration
 const fs = require('fs');
 const Discord = require('discord.js');
-const { prefix, TOKEN } = require('./config.json'); //normal use-case
-//For Heroku integration
-//const prefix = process.env.prefix;
-//const token = process.env.TOKEN;
 
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
@@ -18,12 +14,28 @@ for (const file of commandFiles) {
 
 const cooldowns = new Discord.Collection();
 
-//Comment this line when using Heroku
+var TOKEN;
+try {
+	var { prefix, TOKEN } = require('./config.json'); //normal use-case
+} catch (error) {
+	//For Heroku integration
+	const prefix = process.env.prefix;
+	var TOKEN = process.env.TOKEN;
+}
+//Comment this line when using Heroku. Maybe
 client.login(TOKEN);
 
 client.once('ready', () => {
 	console.log('Ready!');
 	client.user.setActivity("&help");
+
+	var today = new Date();
+	var dd = String(today.getDate()).padStart(2, '0');
+	var mm = String(today.getMonth() + 1).padStart(2, '0');
+	var yyyy = today.getFullYear();
+
+	today = dd + '/' + mm + '/' + yyyy;
+	console.log(`Today is ${today}`);
 });
 
 //Set activity to streaming with rapsta gang's twitch url

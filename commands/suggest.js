@@ -1,9 +1,11 @@
 //Normal use
-/* const {
-    prefix
-} = require('../config.json'); */
-//For Heruku
-const prefix = process.env.prefix;
+var prefix
+try {
+	var { prefix, TOKEN } = require('./config.json'); //normal use-case
+} catch (error) {
+	//For Heroku integration
+	const prefix = process.env.prefix;
+}
 
 module.exports = {
 	name: 'suggest',
