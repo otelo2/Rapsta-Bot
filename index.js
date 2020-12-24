@@ -15,11 +15,12 @@ for (const file of commandFiles) {
 const cooldowns = new Discord.Collection();
 
 var TOKEN;
+var prefix;
 try {
 	var { prefix, TOKEN } = require('./config.json'); //normal use-case
 } catch (error) {
 	//For Heroku integration
-	const prefix = process.env.prefix;
+	var prefix = process.env.prefix;
 	var TOKEN = process.env.TOKEN;
 }
 //Comment this line when using Heroku. Maybe
