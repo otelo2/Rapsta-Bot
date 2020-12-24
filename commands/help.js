@@ -18,9 +18,9 @@ module.exports = {
         } = message.client;
 
         if (!args.length) {
-            data.push('Here\'s a list of all my commands:');
+            data.push('Aquí está la lista de todos mis comandos:');
             data.push(commands.map(command => command.name).join(', '));
-            data.push(`\nYou can send \`${prefix}help [command name]\` to get info on a specific command!`);
+            data.push(`\nPuedes enviar \`${prefix}help [comando]\` para recibir información de un comando en específico!`);
 
             return message.channel.send(data, {
                     split: true
@@ -38,7 +38,7 @@ module.exports = {
         const command = commands.get(name) || commands.find(c => c.aliases && c.aliases.includes(name));
 
         if (!command) {
-            return message.reply('that\'s not a valid command!');
+            return message.reply('Ese no es un comando válido!');
         }
 
         data.push(`**Comando:** ${command.name}`);
