@@ -1,3 +1,10 @@
+//Normal use
+/* const {
+    prefix
+} = require('../config.json'); */
+//For Heruku
+const prefix = process.env.prefix;
+
 module.exports = {
 	name: 'suggest',
     description: 'Haz una sugerencia de funciones que añadir a Rapsta Bot.',
@@ -7,7 +14,7 @@ module.exports = {
 	aliases: ['sugerencia', 'idea'],
 	execute(message, args) {
         var procMessage = message.content;
-        procMessage = procMessage.replace("-suggest","").replace("-sugerencia","").replace("-idea",""); //fugly but fast
+        procMessage = procMessage.replace(`${prefix}suggest`,"").replace(`${prefix}sugerencia`,"").replace(`${prefix}idea`,""); //fugly but fast
 
         //const channel = message.client.channels.fetch('690575674544619571',false)
         const channel = message.client.channels.cache.get('690672830777655396'); //suggersions channel

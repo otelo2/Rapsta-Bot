@@ -7,7 +7,7 @@ module.exports = {
 	aliases: ['sugerenciastream', 'sstream', 'suggeststream'],
 	execute(message, args) {
         var procMessage = message.content;
-        procMessage = procMessage.replace("-sugerenciastream","").replace("-sstream","").replace("-suggeststream","").replace("-suggstream",""); //fugly but fast
+        procMessage = procMessage.replace(`${prefix}-sugerenciastream`,"").replace(`${prefix}sstream`,"").replace(`${prefix}suggeststream`,"").replace(`${prefix}suggstream`,""); //fugly but easy
 
         //const channel = message.client.channels.fetch('690575674544619571',false)
         const channel = message.client.channels.cache.get('692173788560883792'); //suggersions channel inside ZP
