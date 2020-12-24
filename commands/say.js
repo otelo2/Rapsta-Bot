@@ -13,9 +13,9 @@ module.exports = {
     args: true,
     usage: '<texto>',
 	guildOnly: false,
-	//aliases: ['di', 'habla'],
+	aliases: ['di', 'habla'],
 	execute(message, args) { 
-		message.channel.send(message.content.replace(`${prefix}say`,"")); //But this makes it so i cant use aliases
+		message.channel.send(message.content.replace(`${prefix}say`,"").replace(`${prefix}di`,"").replace(`${prefix}habla`,""));
 		message.delete()
 	},
 };
