@@ -3,7 +3,7 @@ var fs = require('fs');
 var os = require('os');
 path = require('path');
 //Set where the file that stores the id's and dates is located
-let filepath = path.join(__dirname, '..', 'cumpleaños', 'fechas.txt');
+let filepath = path.join(__dirname, '..', 'cumples', 'fechas.txt');
 
 //RE for the date
 var re = /^\d{2}\/\d{2}$/;
