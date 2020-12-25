@@ -10,7 +10,7 @@ var re = /^\d{2}\/\d{2}$/;
 
 module.exports = {
     name: 'cumpleaños',
-    description: 'Revisa si el usuario tiene privilegios para comandos avanzados',
+    description: 'Añade la fecha de cumpleaños del usuario',
     args: true,
     usage: '<dd/mm>',
     aliases: ['cumple'],
