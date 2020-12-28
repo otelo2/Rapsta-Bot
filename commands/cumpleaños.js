@@ -28,7 +28,7 @@ module.exports = {
             message.reply(`Voy a recordar que cumples el ${args}`);
 
             //Send the data to the DB
-            client.query(`INSERT into CUMPLES values ('${message.author.id}', '${args}');`, (err, res) => {
+            client.query(`INSERT into CUMPLES values (DEFAULT, '${message.author.id}', '${args}');`, (err, res) => {
                 if (err) throw err; 
                 for (let row of res.rows) {
                     console.log(JSON.stringify(row));
@@ -42,3 +42,5 @@ module.exports = {
         
     },
 };
+
+//client.end();
